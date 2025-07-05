@@ -1,0 +1,70 @@
+/* LAPTOP 1280PX */
+
+@media(max-width: 70rem){
+    .navbar .left-section .search-input{
+        display: none;
+    }
+}
+
+/* @media(max-width: 69rem){
+    html{
+        font-size: 60%;
+    }
+} */
+ 
+
+/* TABLETS 1024PX */
+@media(max-width: 64rem){
+    html{
+        font-size: 52%;
+    }
+    .right-sidebar{
+        display: none;
+    }
+    .feed{
+        margin:0;
+        margin-left: 30%;
+        margin-right: 3%;
+    }
+}
+
+@media(max-width: 54rem){
+    html{
+        font-size: 49%;
+    }
+
+}
+
+/* TABLETS 800PX */
+@media(max-width: 50rem){
+    html{
+        font-size: 44%;
+    }
+    .left-sidebar{
+        display: none;
+    }
+    .feed{
+        margin: 0 auto;
+        width: 95%
+    }
+    .navbar .middle-section{
+        position: fixed;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+    .navbar .middle-section a{
+        padding: 0rem 2rem;
+    }
+    .feed{
+    padding-top: 6rem;
+    min-height: 100vh;
+    }
+    .navbar{
+        padding: 0 3%;
+    }
+    .navbar .left-section .logo{
+        font-size: 2rem;
+    }
+}

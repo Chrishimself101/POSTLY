@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --blue: #1877f2;
+    --light-gray: #f0f2f5;
+    --dark-gray: #65676b;
+    --white: #ffffff;
+    --light-gray-2: #e4e6eb;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--light-gray);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul, ol{
+    list-style: none;
+}
+input, button{
+    border: none;
+    outline: none;
+}
+.navbar{
+    height: 6rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+/* LEFT NAVBAR */
+.navbar .left-section{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    flex-shrink: 0;
+}
+.navbar .left-section .logo{
+    font-size: 2rem;
+    color: var(--blue);
+    font-weight: 600;
+}
+.navbar .left-section .search-input{
+    background-color: var(--light-gray);
+    height: 4rem;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--dark-gray);
+    border-radius: 30px;
+
+}
+.navbar .left-section .search-input input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+/* MIDDLE NAVBAR */
+
+.navbar .middle-section{
+    flex: 1.5;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 5rem;
+}
+.navbar .middle-section a{
+    height: 5.5rem;
+    width: 7.7rem;
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+
+}
+.navbar .middle-section a:hover{
+    background-color: var(--light-gray);
+}
+
+/* RIGHT NAVBAR */
+.navbar .right-section{
+    display: flex;
+    flex: 1;
+    gap: 1.2rem;
+    justify-content: flex-end;
+}
+.navbar .right-section a{
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--light-gray);
+    opacity: 0.5;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    position: relative;
+}
+.navbar .right-section a .icon{
+    width: 2rem;
+    height: 2rem;
+    background-color: #e60d31;
+    font-size: 0.8rem;
+    color: var(--white);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+}
+.navbar .right-section .right-section-image{
+    height: 4rem;
+    width: 4rem;
+}
+.navbar .right-section .right-section-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+.container{
+    margin-top: 8rem;
+}
+
+/* LEFT SIDEBAR */
+.container .left-sidebar{
+    height: 100vh;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 25%;
+    padding: 2.5rem 2rem;
+    overflow-y: auto;
+    padding-bottom: 10rem;
+    
+}
+.left-sidebar::-webkit-scrollbar, .right-sidebar::-webkit-scrollbar{
+    width: 0;
+}
+.left-sidebar a, .right-sidebar .contact a{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 7px;
+}
+.left-sidebar a:hover, .right-sidebar .contact:hover{
+    background-color: var(--light-gray-2);
+}
+.left-sidebar a img, .right-sidebar .contact img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.left-sidebar a p, 
+.right-sidebar .friend-request p,
+.right-sidebar .contact a p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.left-sidebar a i{
+    font-size: 2.5rem;
+    color: var(--blue);
+    opacity: 0.8;
+}
+
+
+/* FEED SECTION */
+.feed{
+    margin: 0 30%;
+    min-height: 100vh;
+}
+.feed .create-post{
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 1.2rem;
+}
+.feed .create-post .input-section{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.feed .create-post .input-section input{
+    padding: 1rem 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    width: 100%;
+    font-size: 1rem;
+}
+.feed .create-post .input-section img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.feed .post-types{
+    display: flex;
+    justify-content: space-between;
+}
+.feed .post-types .post-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    flex: 1;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+}
+.feed .post-types .post-type:hover{
+    background-color: var(--light-gray);
+}
+.feed .post-types .post-type i{
+    font-size: 1.8rem;  
+}
+.feed .post-types .post-type span{
+    color: var(--dark-gray);
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+.feed .status-section{
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+.feed .status-section::-webkit-scrollbar{
+    height: 0;
+}
+.feed .status-section .status{
+    min-width: 110px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.feed .status-section .status img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.feed .status-section .status .profile-picture{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    overflow: hidden;
+    border: 3px solid blue;
+}
+#create-post{
+    background-color: var(--white);
+    position: relative;
+}
+#create-post img{
+    height: 70%;
+}
+#create-post .plus-icon{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--blue);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--white);
+}
+#create-post .plus-icon i{
+    font-size: 1.5rem;
+    color: var(--white);
+
+}
+#create-post p{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.feed .posts .post{
+    background-color: var(--white);
+    box-sizing: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    margin-bottom: 10px;
+}
+.feed .posts .post .post-header{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.feed .posts .post .post-header .user-details{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.feed .posts .post .post-header .user-details .username{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.feed .posts .post .post-header .user-details .date{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+.feed .post .post-header img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.feed .posts .post .post-header .header-icons{
+    display: flex;
+    gap: 8px;
+}
+
+.feed .posts .post .post-header .header-icons .header-icon{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+.feed .posts .post .post-header .header-icons .header-icon:hover{
+    background-color: var(--light-gray);
+}
+.feed .posts .post .post-text{
+    margin: 10px 0;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+.feed .posts .post .post-image{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+.feed .post-footer{
+    padding: 0 10px;
+}
+.feed .post .post-reactions{
+    display: flex;
+    justify-content: space-between;
+}
+.feed .post .post-reactions .likes{
+    display: flex;
+    gap: 8px;
+}
+.feed .post .post-reactions .likes p{
+    font-size: 1.2rem;
+}
+.feed .post .post-reactions .users img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -10px;
+}
+.feed .post .post-reactions .users img:first-child{
+    margin-left: 0;
+}
+.feed .post .post-reactions .comment-text{
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+/* RIGHT SIDEBAR */
+.container .right-sidebar{
+    height: 100vh;
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    width: 25%;
+    padding: 2.5rem 2rem;
+    overflow-y: auto;
+    padding-bottom: 10rem;
+}
+.right-sidebar .friend-request{
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.right-sidebar .friend-request img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.right-sidebar .friend-request span{
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+.right-sidebar .friend-request .request-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+
+}
+.right-sidebar .friend-request .action-butttons{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.right-sidebar .friend-request .action-butttons button{
+    background-color: var(--light-gray-2);
+    padding: 0.8rem 0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+#confirm-btn{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.right-sidebar .birthday-div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+.right-sidebar .birthday-div i{
+    font-size: 2.5rem;
+    opacity: 0.8;
+    color: goldenrod;
+}
+.right-sidebar .birthday-div p{
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+.online-dot{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #31a24c;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid var(--white);
+}
+
+/* GENERAL STLE */
+.line{
+    height: 1px;
+    background-color: var(--dark-gray);
+    margin: 1rem 0;
+    opacity: 0.5;
+}
+.sidebar-text{
+    margin: 1.5px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+footer{
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+footer p{
+    margin: 10px 0;
+}
